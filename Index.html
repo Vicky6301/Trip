@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trip Memories</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    body {
+      background-image: url('images/Bg_image.png');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(6px);
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid white;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      margin-bottom: 1.5rem;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .profile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .trip-info {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .trip-info p {
+      margin: 0.3rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem 0 1.5rem;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .divider div {
+      flex: 1;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .divider i {
+      font-size: 1.5rem;
+      margin: 0 1rem;
+    }
+
+    .icons {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 2rem;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .icons i {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .icons i:nth-child(2) {
+      animation-delay: 1s;
+    }
+
+    .icons i:nth-child(3) {
+      animation-delay: 2s;
+    }
+
+    .icons i:nth-child(4) {
+      animation-delay: 3s;
+    }
+
+    .footer-quote {
+      margin-top: 2.5rem;
+      font-size: 1.5rem;
+      font-style: italic;
+      font-family: 'Dancing Script', cursive;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .profile-img {
+        width: 260px;
+        height: 260px;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      .footer-quote {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="profile-img">
+      <img src="images/trip.jpg" alt="Traveler" />
+    </div>
+
+    <h1>Exploring the Mountains</h1>
+
+    <div class="trip-info">
+      <p><i class="ri-calendar-line"></i> March 10, 2025</p>
+      <p><i class="ri-map-pin-line"></i> Manali, Himachal Pradesh</p>
+    </div>
+
+    <div class="divider">
+      <div></div>
+      <i class="ri-suitcase-line"></i>
+      <div></div>
+    </div>
+  </div>
+</body>
+</html>
